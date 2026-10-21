@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Varer{% endblock %}
+
+{% block content %}
+    <h1 class="meny-tittel">Her er de faste varene som tilbys i kantina!</h1>
+
+    <div class="varer-grid">
+        {% for vare in liste %}
+        <div class="vare-kort">
+            <img src="{{ vare.bilde }}" alt="{{ vare.navn }}">
+            <h3>{{ vare.navn }}</h3>
+            <span class="pris">{{ vare.pris }}</span>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
