@@ -1,7 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}Hjem{% endblock %}
+{% block title %}Meny{% endblock %}
 
 {% block content %}
-    <h1>Her ser du ukes menyen og varmmaten som tilbys i kantina!</h1> 
+    <h1 class="meny-side-tittel">Dagens meny</h1>
+
+    {% set dager = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag"] %}
+
+    <div class="meny-rad">
+        {% for vare in liste %}
+        <div class="meny-dag">
+            <h2 class="meny-dag-navn">{{ dager[loop.index0] }}</h2>
+            <div class="meny-kort">
+                <img src="{{ vare.bilde }}" alt="{{ vare.navn }}">
+                <h3>{{ vare.navn }}</h3>
+                <span class="meny-pris">{{ vare.pris }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}

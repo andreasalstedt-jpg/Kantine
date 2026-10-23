@@ -1,9 +1,41 @@
-
 {% extends "base.html" %}
 
 {% block title %}Hjem{% endblock %}
 
 {% block content %}
-    <h1>Velkommen til kantina!</h1> 
+    <section class="hjem-hero">
+        <h1>Velkommen til kantina!</h1>
+        <p>Fersk mat, god drikke og noe godt å bite i, hver dag gjennom skoleuka.</p>
+        <a class="hjem-knapp" href="/meny">Se ukens meny</a>
+    </section>
+
+    <section class="hjem-kort-rad">
+        <a class="hjem-kort" href="/meny">
+            <h2>Ukens meny</h2>
+            <p>En ny rett hver dag, fra mandag til fredag.</p>
+        </a>
+        <a class="hjem-kort" href="/varer">
+            <h2>Faste varer</h2>
+            <p>Drikke, bakst og snacks som alltid er å få.</p>
+        </a>
+        <a class="hjem-kort" href="/kontaktinfo">
+            <h2>Kontakt oss</h2>
+            <p>Spørsmål om allergener, bestilling eller åpningstider?</p>
+        </a>
+    </section>
+
+    <section class="hjem-info">
+        <div class="hjem-info-boks">
+            <h2>Åpningstider</h2>
+            <ul>
+                <li><span>Mandag - Fredag</span> <span>08:00 - 14:00</span></li>
+                <li><span>Lørdag - Søndag</span> <span>Stengt</span></li>
+            </ul>
+        </div>
+        <div class="hjem-info-boks">
+            <h2>Om kantina</h2>
+            <p>Kantina drives av og for elevene ved Akademiet skole. Vi lager maten fersk hver dag og prøver å holde prisene lave.</p>
+        </div>
+    </section>
 {% endblock %}
 

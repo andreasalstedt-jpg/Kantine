@@ -1,19 +1,126 @@
+
+
 body {
-  background: white;
-  font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.meny-side-tittel {
+  text-align: center;
+  color: #e8833a;
+  font-size: 2.2rem;
+  margin: 30px auto 10px;
+  padding-bottom: 14px;
+  max-width: 600px;
+  border-bottom: 5px solid #e8833a;
+  border-radius: 3px;
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 8px;
+  background: #b4601f;
+}
+.meny-rad {
+  --avstand: 24px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--avstand);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px var(--avstand) 40px;   
+  overflow-x: auto;
+  scrollbar-color: #e8833a #f6ece0;
+}
+
+.meny-kort {
+  flex: 1 0 200px;     
+  min-width: 200px;
+  box-sizing: border-box;
+  background: black;
+  border: 2px solid #e8833a;
+  border-radius: 18px;
+  padding: 18px 14px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  flex: 1;
+  min-width: 0;
+}
+
+.meny-kort:hover {
+  transform: translateY(-6px);
+  border-color: #e8833a;
+  box-shadow: 0 10px 22px rgba(59, 42, 26, 0.15);
+}
+
+.meny-kort img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.meny-kort h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: #e8833a;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meny-dag {
+  flex: 1 0 200px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meny-dag-navn {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #e8833a;
+}
+
+.meny-pris {
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  font-weight: bold;
+  padding: 6px 18px;
+  border-radius: 20px;
+  box-shadow: 0 2px 0 #1b5e20;
+}
 
 .meny-tittel {
   text-align: center;
-  color: #3b2a1a;
+  color: #e8833a;
   font-size: 2rem;
   margin: 30px auto 10px;
   padding-bottom: 12px;
   max-width: 500px;
   border-bottom: 4px dashed #e8833a;
 }
-
+.vare-tittel{
+    color: #e8833a;
+    text-align: center;
+    margin: 30px auto 10px;
+    padding-bottom: 14px;
+    max-width: 600px;
+    border-bottom: 5px solid #e8833a;
+    border-radius: 3px;
+}
 
 .varer-grid {
   display: grid;
@@ -24,14 +131,18 @@ body {
   padding: 0 20px;
 }
 
-
 .vare-kort {
-  background: #fffaf3;
-  border: 2px solid #f0e2cc;
-  border-radius: 16px;
-  padding: 16px;
+  flex: 1 0 200px;     
+  min-width: 200px;
+  box-sizing: border-box;
+  background: white;
+  border: 2px solid #e8833a;
+  border-radius: 18px;
+  padding: 18px 14px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  flex: 1;
+  min-width: 0;
 }
 
 .vare-kort:hover {
@@ -42,18 +153,15 @@ body {
 
 .vare-kort img {
   width: 100%;
-  height: 160px;
-  object-fit: contain;   
+  height: 150px;
+  object-fit: contain;
   margin-bottom: 12px;
 }
 
 .vare-kort h3 {
   margin: 0 0 10px;
   font-size: 1.15rem;
-  color: #3b2a1a;
-}
-.vare-kort img {
-  mix-blend-mode: multiply;
+  color: #e8833a;
 }
 
 .pris {
@@ -63,4 +171,159 @@ body {
   font-weight: bold;
   padding: 5px 16px;
   border-radius: 20px;
+}
+
+
+nav {
+  background: #e8833a;
+  padding: 16px 30px;
+  display: flex;
+  gap: 28px;
+  box-shadow: 0 3px 10px rgba(232, 131, 58, 0.35);
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-wrap: center;
+}
+
+nav a:hover {
+  color: #3b2a1a;
+  text-decoration: none;
+}
+
+.meny-kort:hover {
+  border-color: white;
+  box-shadow: 0 10px 24px rgba(232, 131, 58, 0.4);
+}
+
+footer {
+  background: #e8833a;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px 30px;
+  margin-top: auto;
+}
+
+
+.hjem-hero {
+  text-align: center;
+  padding: 70px 20px 50px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hjem-hero h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin: 0 0 14px;
+  padding-bottom: 14px;
+  border-bottom: 5px solid #e8833a;
+  border-radius: 3px;
+}
+
+.hjem-hero p {
+  color: #f5ead8;
+  font-size: 1.2rem;
+  margin: 20px 0 28px;
+}
+
+.hjem-knapp {
+  display: inline-block;
+  background: #e8833a;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hjem-knapp:hover {
+  background: #f5a25d;
+  transform: translateY(-3px);
+}
+
+
+.hjem-kort-rad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 20px auto 40px;
+  padding: 0 24px;
+}
+
+.hjem-kort {
+  flex: 1 1 250px;
+  background: #e8833a;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 28px 20px;
+  border: 2px solid #f5a25d;
+  border-radius: 18px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.hjem-kort:hover {
+  transform: translateY(-6px);
+  border-color: white;
+  box-shadow: 0 10px 24px rgba(232, 131, 58, 0.4);
+}
+
+.hjem-kort h2 {
+  margin: 0 0 10px;
+  color: #2a1606;
+}
+
+.hjem-kort p {
+  margin: 0;
+}
+
+.hjem-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+
+.hjem-info-boks {
+  flex: 1 1 300px;
+  background: #1b1b1b;
+  color: #f5ead8;
+  border: 2px solid #2e2e2e;
+  border-top: 5px solid #e8833a;
+  border-radius: 14px;
+  padding: 22px 26px;
+}
+
+.hjem-info-boks h2 {
+  margin: 0 0 14px;
+  color: white;
+}
+
+.hjem-info-boks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hjem-info-boks li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+.hjem-info-boks p {
+  margin: 0;
+  line-height: 1.6;
 }
