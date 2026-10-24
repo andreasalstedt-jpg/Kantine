@@ -1,3 +1,4 @@
+"""Laget av Claude"""
 varer =[
     {"navn": "Monster",       "pris": "40kr", "bilde": "https://bilder.ngdata.no/5060751216070/kmh/large.jpg"},
     {"navn": "iskaffe",        "pris": "35kr", "bilde": "https://bilder.ngdata.no/7038010003820/meny/large.jpg"},
@@ -31,9 +32,19 @@ varer =[
 ]
 
 meny = [
-    {"navn" : "nuggets", "pris": "60kr", "bilde": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rs3ty8N214Au8crMVeF20N_Oed2_UGcx78-dJ9ENUiw6xlJHP1JLqJA&s=10"},
-    {"navn" : "ertestuing", "pris": "100kr", "bilde": "https://images.matprat.no/xqrjx7e6s8-VerticalRelated__w=392/ertestuing_2.jpg"},
-    {"navn" : "smalahove", "pris": "10kr", "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Smalahove_klar.JPG/250px-Smalahove_klar.JPG?utm_source=no.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"},
-    {"navn" : "butter chicken", "pris": "70kr", "bilde": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-12-butter-chicken%2Fbutter-chicken-323"},
-    {"navn" : "pizza", "pris": "50kr", "bilde": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ncOxFNm6f_pTvK6unyxTQmfHu0syYMEYmFHVgAZiW827B4X19Fy00hA&s=10"},
+    {"dag": "Mandag", "navn": "Nuggets", "pris": "60kr", "bilde": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Rs3ty8N214Au8crMVeF20N_Oed2_UGcx78-dJ9ENUiw6xlJHP1JLqJA&s=10",
+     "beskrivelse": "Sprø kyllingnuggets servert med pommes frites og dipp."},
+    {"dag": "Tirsdag", "navn": "Ertestuing", "pris": "100kr", "bilde": "https://images.matprat.no/xqrjx7e6s8-VerticalRelated__w=392/ertestuing_2.jpg",
+     "beskrivelse": "Kremet ertestuing, en varm og mettende klassiker."},
+    {"dag": "Onsdag", "navn": "Smalahove", "pris": "10kr", "bilde": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Smalahove_klar.JPG/250px-Smalahove_klar.JPG?utm_source=no.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+     "beskrivelse": "Tradisjonell vestlandsrett med kokt poteter og kålrabistappe."},
+    {"dag": "Torsdag", "navn": "Butter chicken", "pris": "70kr", "bilde": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2024-12-butter-chicken%2Fbutter-chicken-323",
+     "beskrivelse": "Mør kylling i mild, kremet tomatsaus med ris og nanbrød."},
+    {"dag": "Fredag", "navn": "Pizza", "pris": "50kr", "bilde": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1ncOxFNm6f_pTvK6unyxTQmfHu0syYMEYmFHVgAZiW827B4X19Fy00hA&s=10",
+     "beskrivelse": "Fredagspizza med ost og skinke, rett fra ovnen."},
 ]
+     
+     
+     
+     
+
